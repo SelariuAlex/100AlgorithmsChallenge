@@ -1,17 +1,14 @@
 function alternatingSums(a) {
-  let firstArr = [];
-  let secondArr = [];
+  let firstArrSum = 0;
+  let secondArrSum = 0;
 
   for (let i = 0; i < a.length; i++) {
     if (i % 2 === 0) {
-      firstArr.push(a[i]);
+      firstArrSum += a[i];
     } else {
-      secondArr.push(a[i]);
+      secondArrSum += a[i];
     }
   }
-
-  let firstArrSum = firstArr.reduce((acc, elem) => acc + elem);
-  let secondArrSum = secondArr.reduce((acc, elem) => acc + elem);
 
   return [firstArrSum, secondArrSum];
 }

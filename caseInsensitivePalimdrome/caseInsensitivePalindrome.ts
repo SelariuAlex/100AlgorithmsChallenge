@@ -1,16 +1,11 @@
 function isCaseInsensitivePalindrome(inputString) {
   inputString = inputString.toLowerCase();
-  let inputArr = inputString
+  let reversStr = inputString
     .split('')
     .reverse()
     .join('');
-  let reversStr = inputArr;
 
-  if (inputString === reversStr) {
-    return true;
-  } else {
-    return false;
-  }
+  return inputString === reversStr;
 }
 
 console.log(isCaseInsensitivePalindrome('AaBaa'));

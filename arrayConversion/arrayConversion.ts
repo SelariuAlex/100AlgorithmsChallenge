@@ -24,5 +24,5 @@ function replacePair(nums, sumOfNum) {
 }
 
 console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8]));
-console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 9, 1, 2, 3, 4])); // [3,7,11,16,3,7] [21,111,21] [132,21] [132341]
+console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 9, 1, 2, 3, 4]));
 console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7]));

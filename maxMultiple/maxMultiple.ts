@@ -1,5 +1,7 @@
-function maxMultiple(divisor: number, bound: number): number  {
+function maxMultiple(divisor, bound) {
+  let remainder = bound % divisor;
 
+  return bound - remainder;
 }
 
-console.log(maxMultiple(3,10));
+console.log(maxMultiple(3, 10));

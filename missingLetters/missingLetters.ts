@@ -28,15 +28,12 @@ function missingLetters(str) {
     'z'
   ];
 
-  if (str[0] !== 'a') {
-    return undefined;
-  }
-
   for (let i = 0; i < str.length; i++) {
     if (str[i] !== alphabet[i]) {
       return alphabet[i];
     }
   }
+  return undefined;
 }
 console.log(missingLetters('bce'));
 console.log(missingLetters('abce'));

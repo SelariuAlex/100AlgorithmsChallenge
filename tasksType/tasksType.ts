@@ -1,5 +1,19 @@
-function tasksTypes(deadlines: number[], day: number): number[] {
+function tasksTypes(deadlines, day) {
+  const today = [];
+  const upcoming = [];
+  const later = [];
 
+  deadlines.forEach(num => {
+    if (num <= day) {
+      today.push(num);
+    } else if (num > day + 7) {
+      later.push(num);
+    } else {
+      upcoming.push(num);
+    }
+  });
+
+  return [today.length, upcoming.length, later.length];
 }
 
 console.log(tasksTypes([1, 2, 3, 4, 5], 2));

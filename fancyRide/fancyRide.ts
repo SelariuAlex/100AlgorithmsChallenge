@@ -7,7 +7,7 @@ function fancyRide(leng, fares) {
       answer = rides[i];
       break;
     } else {
-      answer = "can't aford it";
+      answer = `can't afford a ${leng} mile trip`;
     }
   }
   return answer;

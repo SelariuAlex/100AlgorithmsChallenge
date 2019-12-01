@@ -1,3 +1,5 @@
+// Part 1
+
 const moduleArray = [
   70102,
   60688,
@@ -101,11 +103,32 @@ const moduleArray = [
   131081
 ];
 
-const fuelModule = mass => Math.floor(mass / 3) - 2;
+const fuelNeededCalculator = mass => Math.floor(mass / 3) - 2;
 
-const allModules = moduleArray => moduleArray.map(e => fuelModule(e));
+const allModules = moduleArray => moduleArray.map(e => fuelNeededCalculator(e));
 
 const sumOfFuel = mapArray =>
   mapArray.reduce((acc, currentValue) => acc + currentValue);
 
+// firt answer
 console.log(sumOfFuel(allModules(moduleArray)));
+
+// Part 2
+
+const fuelForFuel = fuel => {
+  const amountOfFuel = [];
+
+  while (fuel > 0) {
+    if (fuelNeededCalculator(fuel) > 0) {
+      amountOfFuel.push(fuelNeededCalculator(fuel));
+    }
+    fuel = fuelNeededCalculator(fuel);
+  }
+
+  return sumOfFuel(amountOfFuel);
+};
+
+const allFuel = arr => arr.map(e => fuelForFuel(e));
+
+// second answer
+console.log(sumOfFuel(allFuel(moduleArray)));

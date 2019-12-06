@@ -169,14 +169,14 @@ const alarmProgram = arr => {
 
 // part 2
 
-for (let i = 1; i < 100; i++) {
-  for (let j = 1; j < 100; j++) {
+for (let noun = 1; noun < 100; noun++) {
+  for (let verb = 1; verb < 100; verb++) {
     let testPuzzle = [...puzzle];
-    testPuzzle[1] = i;
-    testPuzzle[2] = j;
+    testPuzzle[1] = noun;
+    testPuzzle[2] = verb;
 
     if (alarmProgram(testPuzzle) === 19690720) {
-      console.log(100 * i + j);
+      console.log(100 * noun + verb);
     }
   }
 }
